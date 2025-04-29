@@ -1,3 +1,26 @@
+<?php
+session_start();
+include 'connect.php';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $stmt = $conn->prepare("SELECT * FROM users WHERE email = ? AND password = ?");
+    $stmt->bind_param("ss", $email, $password);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        $_SESSION['email'] = $email;
+        header("Location: events.php");
+        exit();
+    } else {
+        echo "❌ Invalid credentials!";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

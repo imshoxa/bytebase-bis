@@ -1,16 +1,5 @@
 <?php
 session_start();
-include("connect.php");
-// include("register.php");
-
-if (!isset($_SESSION['email'])) {
-    header("Location: homepage.php");
-    exit();
-}
-
-$email = $_SESSION['email'];
-$query = mysqli_query($conn, "SELECT firstName, lastName FROM users WHERE email='$email'");
-$user = mysqli_fetch_assoc($query);
 ?>
 
 <!DOCTYPE html>
@@ -18,8 +7,12 @@ $user = mysqli_fetch_assoc($query);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style2.css?v=1">
     <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="styledot.css?v=1">
+    <link rel="stylesheet" href="stylemainpage.css?v=1">
+    <!-- <link rel="stylesheet" href="mainpage.php"> -->
+    <!-- <link rel="stylesheet" href="events.php"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <title>ByteBase</title>
 </head>
@@ -28,19 +21,23 @@ $user = mysqli_fetch_assoc($query);
         <nav class="nav">
             <div class="container">
                 <div class="nav__item">
-                    <a href=""><img src="img/logobyte-v-3.png" alt=""></a>
+                    <a href="mainpage.php"><img src="img/logobyte-v-3.png" alt=""></a>
                 <div class="list">
                     <ul class="categories">
-                        <li><a href="#home" class="categories_list">Home</a></li>
-                        <li><a href="#job" class="categories_list">Events</a></li>
-                        <li><a href="#recruiters" class="categories_list">News</a></li>
-                        <li><a href="#contacts" class="categories_list">About us</a></li>
+                        <li><a href="mainpage.php" class="categories_list">Home</a></li>
+                        <li><a href="events.php" class="categories_list">Events</a></li>
+                        <li><a href="news.php" class="categories_list">News</a></li>
+                        <li><a href="about.php" class="categories_list">About Us</a></li>
                     </ul>
                 </div>
                 <div class="list_2">
                     <ul class="category-2">
-                        <li><a href="register.php" class="categories__list-2">Register</a></li>
-                        <li><a href="" class="categories__list-2">Login</a></li>
+                    <?php if (!isset($_SESSION['email'])): ?>
+          <a href="index.php" class="categories__list-2">Register</a>
+          <a href="index.php" class="categories__list-2">Sign In</a>
+        <?php else: ?>
+          <a href="logout.php" class="categories__list-2">Log Out</a>
+        <?php endif; ?>
                     </ul>
                 </div>
                 </div>
@@ -83,10 +80,18 @@ $user = mysqli_fetch_assoc($query);
         </section>
         <section class="section-2">
             <div class="container">
-                <h1 class="section-2-title">Current vacancies on your field</h1>
+                <div class="section-2-title-wrapper" style="display: flex; justify-content: space-between; align-items: center;">
+  <h1 class="section-2-title">Current vacancies on your field</h1>
+  <?php if (isset($_SESSION['email'])): ?>
+    <a href="add_vacancy.php" class="add-vacancy-btn"><i class="fa-solid fa-plus"></i> Add Vacancy</a>
+  <?php endif; ?>
+</div>
                 <div class="section-2-grid">
                     <div class="section-2-blocks">
-                        <div class="section-2-head">
+                    
+                    <?php include 'load_vacancies.php'; ?>
+                    
+                        <!-- <div class="section-2-head">
                             <p class="p-1">Backend (Junior)</p>
                             <div class="section-2-head-1">
                                 <i class="fa-solid fa-location-dot"></i>
@@ -292,10 +297,15 @@ $user = mysqli_fetch_assoc($query);
                                     and contains the logic to send the appropriate data back to the client.</p>
                             </div>
                             <a class="apply-btn" href="">Apply</a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
+            <div class="dot-pagination">
+  <span class="dot active" onclick="showSlide(1)"></span>
+  <span class="dot" onclick="showSlide(2)"></span>
+  <span class="dot" onclick="showSlide(3)"></span>
+</div>
         </section>
         <section class="pre-footer">
             <div class="container">
@@ -334,6 +344,6 @@ $user = mysqli_fetch_assoc($query);
             </div>
         </nav>
     </footer>
-    <!-- <script src="script.js"></script> -->
+    <script src="scriptvacancy.js"></script>
 </body>
 </html>

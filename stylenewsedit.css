@@ -1,0 +1,106 @@
+@import 'fonts.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to right, #86b9d9, #6b90aa);
+  min-height: 100vh;
+}
+
+.main-add-news {
+  padding-top: 120px;
+  padding-bottom: 130px;
+  min-height: calc(100vh - 100px);
+}
+
+.form-box-edit {
+  background: #e0e1dd;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+  width: 500px; /* СУЖАЕМ карточку */
+  min-height: 480px; /* И по высоте чуть меньше */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.form-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #111827;
+  /* margin-top: -30px; */
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  background: white;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: rgb(87, 120, 153);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 5px;
+}
+
+.btn:hover {
+  background: #5a7796;
+}
+
+.back-link {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.back-link a {
+  color: rgb(87, 120, 153);
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  transition: 0.3s;
+}
+
+.back-link a:hover {
+  color: #1d3765;
+}
+
+.error {
+  color: red;
+  font-size: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.main__intro-news-title{
+margin-top: 0px;
+}

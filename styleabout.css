@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f9fafc;
+  color: #1c1e21;
+  line-height: 1.6;
+}
+
+/* About Intro Section */
+.about-intro {
+  background: linear-gradient(to right, #86b9d9, #6b90aa);
+  color: black;
+  padding: 200px 20px;
+  text-align: center;
+}
+
+.about-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.about-desc {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* About Team Section */
+.about-team {
+  background: #ffffff;
+  padding: 70px 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: black;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 40px;
+    justify-items: center;
+    align-items: stretch;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 900px;
+  }
+  
+  .values-grid li {
+    background: #f0f4f8;
+    border-radius: 12px;
+    width: 160px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  
+  .values-grid i {
+    font-size: 2.5rem;
+    color: #6b90aa;
+    margin-bottom: 10px;
+  }
+  
+  .values-grid p {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 0; /* Убираем отступы у текста */
+  }
+
+/* Pre-Footer Section */
+.pre-footer {
+  background: #f2f6fa;
+  padding: 60px 20px;
+}
+
+.footer__block {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer__title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  color: black;
+}
+
+.footer__big-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer__mini-blocks {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer__text-title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #1c1e21;
+  margin-bottom: 10px;
+}
+
+.footer__text {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 2.2rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .footer__big-block {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}

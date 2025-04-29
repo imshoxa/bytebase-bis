@@ -1,0 +1,87 @@
+/* Главный фон всей секции */
+.edit-vacancy-section {
+    background: linear-gradient(to right, #86b9d9, #6b90aa);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Карточка редактирования */
+  .edit-vacancy-card {
+    background: #f8f8f8;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .edit-vacancy-card h1 {
+    font-family: 'Inter';
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #111827;
+    text-align: center;
+  }
+  
+  /* Поля формы */
+  .edit-form input[type="text"],
+  .edit-form input[type="date"],
+  .edit-form textarea {
+    width: 100%;
+    padding: 10px 14px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: 'Inter';
+    font-size: 15px;
+    background: white;
+  }
+  
+  .edit-form textarea {
+    resize: vertical;
+    min-height: 150px;
+  }
+  
+  /* Кнопки */
+  .edit-form-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .btn {
+    flex: 1;
+    padding: 10px 0;
+    font-family: 'Inter';
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  /* Save */
+  .save-btn {
+    background-color: rgb(87, 120, 153);
+    color: white;
+  }
+  .save-btn:hover {
+    background-color: #1d3765;
+  }
+  
+  /* Cancel */
+  .cancel-btn {
+    background-color: #9ca3af;
+    color: white;
+  }
+  .cancel-btn:hover {
+    background-color: #6b7280;
+  }
+  

@@ -22,7 +22,7 @@ li{
     padding: 17px 0; 
     /* left: 0; */
     position: fixed;
-    top: 25;
+    top: 0;
     width: 100%;
     background: white;
     border-bottom: 1px solid rgb(87, 120, 153);
@@ -55,7 +55,7 @@ li{
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    padding: 9px 13px;
+    padding: 11px 13px;
     background:rgb(87, 120, 153);
     color: white;
     border-radius: 8px;
@@ -85,10 +85,6 @@ li{
     width: 500px;
     margin-right: 210px;
 }
-.main {
-    padding-top: 30px; 
-  }
-  
 .main__intro-title{
     font-family: 'Inter';
     font-size: 36px;
@@ -139,6 +135,7 @@ li{
 .section__intro{
     background-color: #609aca;
     background: linear-gradient(to right, #86b9d9, #6b90aa);
+    /* background:rgb(151, 169, 187); */
 }
 .mini__section-title{
     font-family: 'Inter';
@@ -192,7 +189,7 @@ li{
     line-height: 40px;
     letter-spacing: -0.025em;
     text-align: left;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     color: #111827;
     margin-top: 30px;
     display: flex;
@@ -276,7 +273,7 @@ li{
     color: white;
     border-radius: 8px;
     /* padding-left: 10px; */
-    /* margin: 0 0 0 170px; */
+    margin: 0 0 0 170px;
     cursor:pointer;
     transition:0.5s;
 }
@@ -291,7 +288,7 @@ li{
     letter-spacing: -0.025em;
     text-align: left;
     margin-bottom: 50px;
-    margin-top: 100px;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -352,66 +349,174 @@ li{
     color: white;
     padding-left: 35px;
 }
-
-  /* Форма */
-  .form-box {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+.main__intro-news-title{
+    font-family: 'Inter';
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 40px;
+    letter-spacing: -0.025em;
+    text-align: left;
     margin-bottom: 30px;
-  }
-  
-  input[type="text"],
-  input[type="email"],
-  input[type="password"],
-  input[type="date"],
-  textarea {
-    width: 100%;
-    padding: 12px;
-    /* margin: 10px 0 20px 0; */
-    border-radius: 8px;
-    /* border: 1px solid #ccc; */
-    font-size: 16px;
-  }
-  
-  textarea {
-    resize: vertical;
-  }
-  
-  input[type="submit"], .btn {
-    width: 100%;
-    padding: 12px;
-    background-color: rgb(87, 120, 153);
+    color: #111827;
+    margin-top: 80px;
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main__intro-news-text{
+    font-family: 'Inter';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
     color: white;
-    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;   
+}
+.news__title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter';
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 40px;
+    letter-spacing: -0.025em;
+    text-align: left;
+    margin-bottom: 10px;
+    color: #111827;
+}
+.news__desc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.news__date{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+.read-more{
+    
+
+    padding: 10px 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 24px;
+    background:rgb(87, 120, 153);
+    color: white;
     border-radius: 8px;
+    /* padding-left: 10px; */
+    cursor:pointer;
+    transition:0.5s;
+    margin-bottom: 50px;
+}
+.read-more:hover{
+    background:#1d3765;
+}
+.news__item{
+    margin-top: 50px;
+    border-radius: 8px;
+    border-color: black;
+    /* background: rgb(201, 198, 194); */
+    background: #e0e1dd;
+    width: 1128px;
+    height: 275px;
+    padding: 20px;
+}
+.section__intro{
+    padding-bottom: 100px;
+}
+.add-news-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.add-news-button {
+    display: inline-block;
+    padding: 12px 28px;
+    background: rgb(87, 120, 153);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+    transition: background 0.3s, transform 0.3s;
+}
+
+.add-news-button:hover {
+    background: #1d3765;
+    transform: translateY(-3px);
+}
+.news__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.edit-btn, .delete-btn {
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
     font-weight: 600;
     font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  input[type="submit"]:hover, .btn:hover {
-    background-color: #1d3765;
-  }
-  
-  /* События */
-  .events-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 30px;
-  }
-  
-  .event-card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.1);
-  }
-  
-  .event-card h3 {
-    margin-bottom: 10px;
-    color: #1d3765;
-  }
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+}
+
+/* Edit button */
+.edit-btn {
+    background-color: rgb(87, 120, 153); /* основной голубой */
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #1d3765; /* темно-синий */
+    transform: translateY(-2px);
+}
+
+/* Delete button */
+.delete-btn {
+    background-color: #6b90aa; /* светло-голубой */
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #1d3765; /* темно-синий */
+    transform: translateY(-2px);
+}
+.full-content{
+    font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #111827;
+}

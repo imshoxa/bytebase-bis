@@ -1,0 +1,21 @@
+.dot-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    gap: 10px;
+  }
+  
+  .dot {
+    height: 12px;
+    width: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .dot.active {
+    background-color: #6b90aa;
+  }
+  
